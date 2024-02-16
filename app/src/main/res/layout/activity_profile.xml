@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ProfileActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileImage"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="34dp"
+        android:src="@drawable/ic_select_image"
+        app:layout_constraintBottom_toTopOf="@+id/profileUserName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/profilePassword"
+        android:layout_width="288dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="42dp"
+        android:background="@drawable/custom_edit"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:padding="12sp"
+        android:text="*********"
+        app:layout_constraintBottom_toTopOf="@+id/profileButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailProfile" />
+
+    <EditText
+        android:id="@+id/emailProfile"
+        android:layout_width="300dp"
+        android:layout_height="83dp"
+
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="45dp"
+        android:background="@drawable/custom_edit"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/profilePassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileUserName" />
+
+    <Button
+        android:id="@+id/profileButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/custom_edit"
+        android:backgroundTint="@color/purple"
+        android:hapticFeedbackEnabled="true"
+        android:padding="12sp"
+        android:text="update profile"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/purple"
+        app:layout_constraintBottom_toTopOf="@+id/progressProfile"
+        app:layout_constraintEnd_toEndOf="@+id/profilePassword"
+        app:layout_constraintTop_toBottomOf="@+id/profilePassword" />
+
+    <ProgressBar
+        android:id="@+id/progressProfile"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/profileButton"
+        app:layout_constraintTop_toBottomOf="@+id/profileButton" />
+
+    <EditText
+        android:id="@+id/profileUserName"
+        android:layout_width="309dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="26dp"
+        android:background="@drawable/custom_edit"
+        android:inputType="textLongMessage"
+        android:padding="12sp"
+        android:text="Daniel"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/emailProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
